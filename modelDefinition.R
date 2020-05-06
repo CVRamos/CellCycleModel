@@ -129,9 +129,9 @@ minimize = function(x) {
              runif(n=1, min=10000, max=1000000)))
   }
   
-  EdUposBrdUpos = u1/(u1+u2) + u2/(u1+u2)*exp(-(u1+u2)*t)
+  EdUposBrdUpos = u2/(u1+u2) + u1/(u1+u2)*exp(-(u1+u2)*t)
   EdUposBrdUneg = 1 - EdUposBrdUpos
-  EdUnegBrdUpos = u1/(u1+u2) - u1/(u1+u2)*exp(-(u1+u2)*t)
+  EdUnegBrdUpos = u2/(u1+u2) - u2/(u1+u2)*exp(-(u1+u2)*t)
   
   residualsEdUposBrdUpos = EdUposBrdUpos - expEdUposBrdUpos
   residualsEdUposBrdUneg = EdUposBrdUneg - expEdUposBrdUneg
